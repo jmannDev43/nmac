@@ -12,25 +12,17 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
-//    private List<String> events = Arrays.asList(
-//            "One", "Two", "Three"
-//            );
-
-    public List<Event> getAllEvents() {
-        List<Event> events = new ArrayList<>();
-        eventRepository.findAll().forEach(events::add);
-        return events;
-    }
+//    public List<Event> getAllEvents() {
+//        List<Event> events = new ArrayList<>();
+//        eventRepository.findAll().forEach(events::add);
+//        return events;
+//    }
 
     public Event getEvent(String id) {
         return eventRepository.findOne(id);
     }
 
-    public List<Event> getEventsByYear(Integer year) {
-        return eventRepository.findByEventYear(year);
-    }
-
-    public List<Event> getEventsByState(String state) {
-        return eventRepository.findByLocalState(state);
+    public List<Event> getEventsByYearAndState(Integer year, String state) {
+        return eventRepository.findByEventYearAndLocalState(year, state);
     }
 }

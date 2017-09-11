@@ -16,9 +16,11 @@ public class Event {
     @Column(name = "report_number")
     private String reportNumber;
     private Date eventDate;
+    @Column(name = "event_year")
     private Integer eventYear;
     private String eventLocalTime;
     private String localCity;
+    @Column(name = "local_state")
     private String localState;
     private String localAirport;
     private String eventDesc;
@@ -31,5 +33,4 @@ public class Event {
     @ManyToOne
     @JoinColumn(name = "operator_id_2")
     private Operator operator2;
-    // Need Ids?
 }
