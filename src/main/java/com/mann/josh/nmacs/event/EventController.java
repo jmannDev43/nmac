@@ -33,4 +33,10 @@ public class EventController {
     public List<Event> getEventsByState(@PathVariable Integer year, @PathVariable String state) {
         return eventService.getEventsByYearAndState(year, state);
     }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping("/events/year/{year}/state/{state}/city/{city}")
+    public List<Event> getEventsByStateAndCity(@PathVariable Integer year, @PathVariable String state, @PathVariable String city) {
+        return eventService.getEventsByYearAndStateAndCity(year, state, city);
+    }
 }

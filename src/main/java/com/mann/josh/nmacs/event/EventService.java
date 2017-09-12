@@ -25,4 +25,8 @@ public class EventService {
     public List<Event> getEventsByYearAndState(Integer year, String state) {
         return eventRepository.findByEventYearAndLocalState(year, state);
     }
+
+    public List<Event> getEventsByYearAndStateAndCity(Integer year, String state, String city) {
+        return eventRepository.findByEventYearAndLocalStateAndLocalCity(year, state, city);
+    }
 }
