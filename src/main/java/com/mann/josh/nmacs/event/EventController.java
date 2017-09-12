@@ -30,7 +30,7 @@ public class EventController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/events/year/{year}/state/{state}")
-    public List<Event> getEventsByState(@PathVariable Integer year, String state) {
+    public List<Event> getEventsByState(@PathVariable Integer year, @PathVariable String state) {
         return eventService.getEventsByYearAndState(year, state);
     }
 }
