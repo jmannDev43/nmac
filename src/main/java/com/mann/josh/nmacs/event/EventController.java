@@ -14,14 +14,6 @@ public class EventController {
     @Autowired
     private EventService eventService;
 
-//    @CrossOrigin(origins = "http://localhost:3000")
-//    @RequestMapping("/events")
-//    public List<Event> getAllEvents() {
-//        List<Event> events = new ArrayList<>();
-//        eventService.getAllEvents().forEach(events::add);
-//        return events;
-//    }
-
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/events/{id}")
     public Event getEvent(@PathVariable String id) {

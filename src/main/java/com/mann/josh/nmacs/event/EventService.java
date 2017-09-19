@@ -12,12 +12,6 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
-//    public List<Event> getAllEvents() {
-//        List<Event> events = new ArrayList<>();
-//        eventRepository.findAll().forEach(events::add);
-//        return events;
-//    }
-
     public Event getEvent(String id) {
         return eventRepository.findOne(id);
     }

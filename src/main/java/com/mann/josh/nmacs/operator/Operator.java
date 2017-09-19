@@ -19,6 +19,4 @@ public class Operator {
     private String operatorType;
     private Integer altitude;
     private String flightPhase;
-//    @OneToOne
-//    private Event event;
 }

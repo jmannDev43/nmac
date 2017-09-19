@@ -12,9 +12,4 @@ public class OperatorController {
 
     @Autowired
     private OperatorService operatorService;
-
-//    @RequestMapping("/events/{eventId}/operators")
-//    public List<Operator> getAllEvents(@PathVariable String eventId) {
-//        return operatorService.getEventOperators(eventId);
-//    }
 }

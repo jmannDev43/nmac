@@ -11,14 +11,4 @@ public class OperatorService {
 
     @Autowired
     private OperatorRepository operatorRepository;
-
-//    private List<String> operators = Arrays.asList(
-//            "One", "Two", "Three"
-//            );
-
-//    public List<Operator> getEventOperators(String eventId) {
-//        List<Operator> operators = new ArrayList<>();
-//        operatorRepository.findByEventReportNumber(eventId).forEach(operators::add);
-//        return operators;
-//    }
 }
