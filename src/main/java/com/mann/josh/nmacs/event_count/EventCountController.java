@@ -16,13 +16,13 @@ public class EventCountController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/eventCounts/year/{year}")
-    public List<EventCount> getEventsByYear(@PathVariable Integer year) {
+    public List<EventCount> getEventCountsByYear(@PathVariable Integer year) {
         return eventCountService.getEventCountsByYear(year);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping("/eventCounts/year/{year}/state/{state}")
-    public List<EventCount> getEventsByYear(@PathVariable Integer year, @PathVariable String state) {
-        return eventCountService.getEventCountsByYearAndState(year, state);
+    @RequestMapping("/eventCounts/year/{year}/country/{country}/state/{state}")
+    public List<EventCount> getEventCountsByYearCountryState(@PathVariable Integer year, @PathVariable String country, @PathVariable String state) {
+        return eventCountService.getEventCountsByYearCountryState(year, country, state);
     }
 }

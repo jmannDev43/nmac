@@ -22,6 +22,7 @@ public class Event {
     private String localCity;
     @Column(name = "local_state")
     private String localState;
+    private String localCountry;
     private String localAirport;
     private String eventDesc;
     private float latitude;

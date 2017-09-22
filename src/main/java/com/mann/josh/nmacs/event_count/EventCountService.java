@@ -14,7 +14,7 @@ public class EventCountService {
         return eventCountRepository.findByEventYear(year);
     }
 
-    public List<EventCount> getEventCountsByYearAndState(Integer year, String state) {
-        return eventCountRepository.findByEventYearAndLocalState(year, state);
+    public List<EventCount> getEventCountsByYearCountryState(Integer year, String country, String state) {
+        return eventCountRepository.findByEventYearAndLocalCountryAndLocalState(year, country, state);
     }
 }

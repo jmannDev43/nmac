@@ -19,6 +19,8 @@ public class EventCount {
     private Integer id;
     @Column(name = "event_year")
     private Integer eventYear;
+    @Column(name = "local_country")
+    private String localCountry;
     @Column(name = "local_city")
     private String localCity;
     @Column(name = "local_state")

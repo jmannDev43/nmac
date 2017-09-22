@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface EventCountRepository extends CrudRepository<EventCount, String> {
     public List<EventCount> findByEventYear(Integer year);
-    public List<EventCount> findByEventYearAndLocalState(Integer year, String state);
+    public List<EventCount> findByEventYearAndLocalCountryAndLocalState(Integer year, String country, String state);
 }
