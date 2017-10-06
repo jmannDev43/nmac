@@ -26,8 +26,8 @@ deploy:
     - mkdir -p ~/.ssh
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
-    - rsync -av - target/*.jar "$DEST_PATH"
-  after_script:
-    - ssh $SSH_PRIVATE_KEY java -jar $DEST_PATH/nmacs-0.0.1-SNAPSHOT.jar -h
+    - echo "before rsync"
+    - rsync -av nmacs-0.0.1-SNAPSHOT.jar "$DEST_PATH"
+    - echo "after rsync"
   only:
     - master
