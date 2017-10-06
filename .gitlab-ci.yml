@@ -27,7 +27,7 @@ deploy:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
     - echo "before rsync"
-    - rsync -av nmacs-0.0.1-SNAPSHOT.jar "$DEST_PATH"
+    - rsync -av ./target/*.jar "$DEST_PATH"
     - echo "after rsync"
   only:
     - master
