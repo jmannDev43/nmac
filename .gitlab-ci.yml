@@ -1,0 +1,21 @@
+#services:
+#  - postgres:latest
+
+stages:
+  - build
+  # - deploy
+
+build:
+  image: maven:slim
+  stage: build
+  script:
+    - mvn clean install -B
+  artifacts:
+    expire_in: 3 months
+    paths:
+      - target/*.jar
+
+#deploy:
+#  image:
+
+# java -jar target/nmacs-0.0.1-SNAPSHOT.jar -h
