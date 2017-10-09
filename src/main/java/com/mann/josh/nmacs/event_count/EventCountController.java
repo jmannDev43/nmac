@@ -14,13 +14,13 @@ public class EventCountController {
     @Autowired
     private EventCountService eventCountService;
 
-    @CrossOrigin(origins = "http://localhost:5001")
+    @CrossOrigin
     @RequestMapping("/eventCounts/year/{year}")
     public List<EventCount> getEventCountsByYear(@PathVariable Integer year) {
         return eventCountService.getEventCountsByYear(year);
     }
 
-    @CrossOrigin(origins = "http://localhost:5001")
+    @CrossOrigin
     @RequestMapping("/eventCounts/year/{year}/country/{country}/state/{state}")
     public List<EventCount> getEventCountsByYearCountryState(@PathVariable Integer year, @PathVariable String country, @PathVariable String state) {
         return eventCountService.getEventCountsByYearCountryState(year, country, state);
