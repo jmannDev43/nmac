@@ -29,6 +29,7 @@ deploy:
     - echo "before rsync"
     - rsync -av ./target/*.jar "$SSH_ROOT:$DEST_PATH"
     - echo "after rsync"
-    - ssh $SSH_ROOT "java -jar $DEST_PATH/nmacs-0.0.1-SNAPSHOT.jar"
+    # While cool, I don't think it's possible to actually do this, because the job would need to keep going...
+#    - ssh $SSH_ROOT "java -jar $DEST_PATH/nmacs-0.0.1-SNAPSHOT.jar"
   only:
     - master
